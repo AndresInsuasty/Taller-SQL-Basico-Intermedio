@@ -2,7 +2,7 @@
 
 ## Contexto del Negocio
 
-Bienvenida/o al taller SQL práctico de **"El Último Salto"**, una tienda especializada en paracaidismo y deportes extremos ubicada en los Andes. 
+Bienvenida/o al taller SQL práctico de **"El Último Salto"**, una tienda especializada en paracaidismo y deportes extremos ubicada en Pasto, Nariño. 
 
 **Productos principales:** Paracaídas (militares, deportivos, emergencia) y accesorios de seguridad (cascos, altímetros, trajes de vuelo, gafas).
 
@@ -39,7 +39,7 @@ Bienvenida/o al taller SQL práctico de **"El Último Salto"**, una tienda espec
    - Usa `git init` para inicializar tu repositorio
    - Haz commits lógicos por cada ejercicio o grupo de ejercicios
    - Incluye un `.gitignore` que excluya archivos innecesarios
-   - Sube a GitHub o entrega el `.zip` del repositorio
+   - Sube a GitHub el codigo generado
 
 4. **Documentación:**
    - En tu `README.md`, explica brevemente cómo ejecutar las soluciones
@@ -106,7 +106,7 @@ Pista: MAX(total_venta).
 ```
 
 ### Ejercicio 10
-**Pregunta:** Muestra todos los clientes de género "F" (femenino) ordenados por fecha de nacimiento (más antiguos primero).
+**Pregunta:** Muestra todos los clientes de género "F" (femenino) ordenados por fecha de nacimiento (más viejitas primero).
 ```
 Pista: WHERE genero = 'F' y ORDER BY fecha_nacimiento ASC.
 ```
@@ -150,7 +150,6 @@ Estos ejercicios requieren obligatoriamente:
 - **GROUP BY** y **HAVING**
 - **WITH (CTEs)** o **Subconsultas**
 
-**Nota:** No se permiten funciones de ventana (`ROW_NUMBER()`, `RANK()`, `PARTITION BY`).
 
 ### Ejercicio 16
 **Pregunta:** ¿Cuál es el cliente que más dinero ha gastado en total? Muestra su nombre y monto total.
@@ -178,7 +177,7 @@ Pista: SUM(cantidad) sobre detalle_ventas, GROUP BY producto, JOIN con productos
 ```
 
 ### Ejercicio 20
-**Pregunta:** Para cada categoría de producto, calcula el ingresos total, cantidad de unidades vendidas y ticket promedio por venta.
+**Pregunta:** Para cada categoría de producto, calcula el ingreso total, cantidad de unidades vendidas y ticket promedio por venta.
 ```
 Pista: GROUP BY categoria, SUM(total_venta), COUNT(*), AVG().
 ```
@@ -353,7 +352,7 @@ for row in cursor.fetchall():
 ## 🎓 Recursos Adicionales
 
 - **SQLite Docs:** https://www.sqlite.org/lang.html
-- **SQL Tutorial:** https://www.w3schools.com/sql/
+- **SQL Tutorial:** https://youtube.com/playlist?list=PLuAKekN0nRzxQFTiDMOl-7mFEPZThWhID&si=O3fXcE2_G79yKwny
 - **Regex en SQLite:** Para búsquedas avanzadas, SQLite soporta GLOB y LIKE.
 
 ---
@@ -370,7 +369,7 @@ R: Es normal. Usa `CAST(strftime('%Y', 'now') - strftime('%Y', fecha_nacimiento)
 R: No. Trabaja solo con SELECT. Los ejercicios son de lectura.
 
 **P: ¿Necesito optimizar JOINs?**  
-R: No es obligatorio, pero es buena práctica. Usa EXPLAIN QUERY PLAN si te interesa.
+R: No es obligatorio, pero es buena práctica.
 
 ---
 
