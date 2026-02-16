@@ -140,37 +140,62 @@ Lee [taller.md](taller.md) para los 30 ejercicios propostos y sigue las instrucc
 - Datos de ~2 años (2024-2025)
 - Base sintética pero realista
 
-## 🗄️ Esquema de la Base de Datos
+## 🗄️ Diagrama Entidad-Relación
 
-```sql
-clientes
-├── id_cliente (PK)
-├── nombre
-├── correo
-├── fecha_nacimiento
-└── genero
+```mermaid
+erDiagram
+    CLIENTES ||--o{ VENTAS : "realiza"
+    VENTAS ||--|{ DETALLE_VENTAS : "contiene"
+    PRODUCTOS ||--o{ DETALLE_VENTAS : "participa en"
 
-productos
-├── id_producto (PK)
-├── nombre
-├── categoria
-├── precio
-└── stock
+    CLIENTES {
+        int id_cliente PK
+        string nombre
+        string correo
+        date fecha_nacimiento
+        string genero
+    }
 
-ventas
-├── id_venta (PK)
-├── id_cliente (FK)
-├── fecha_venta
-├── total_venta
-└── cupon_usado
+    PRODUCTOS {
+        int id_producto PK
+        string nombre
+        string categoria
+        float precio
+        int stock
+    }
 
-detalle_ventas
-├── id_detalle (PK)
-├── id_venta (FK)
-├── id_producto (FK)
-├── cantidad
-└── precio_unitario
+    VENTAS {
+        int id_venta PK
+        int id_cliente FK
+        date fecha_venta
+        float total_venta
+        string cupon_usado
+    }
+
+    DETALLE_VENTAS {
+        int id_detalle PK
+        int id_venta FK
+        int id_producto FK
+        int cantidad
+        float precio_unitario
+    }
 ```
+
+### 📐 Explicación de las Relaciones
+
+| Relación | Multiplicidad | Significado |
+|----------|---------------|-------------|
+| **CLIENTES → VENTAS** | 1:N | Un cliente puede hacer múltiples ventas |
+| **VENTAS → DETALLE_VENTAS** | 1:N | Una venta contiene uno o más productos |
+| **PRODUCTOS → DETALLE_VENTAS** | 1:N | Un producto puede aparecer en múltiples ventas |
+
+### 🔑 Claves Primarias y Foráneas
+
+- **Claves Primarias (PK):** `id_cliente`, `id_producto`, `id_venta`, `id_detalle`
+- **Claves Foráneas (FK):** 
+  - `ventas.id_cliente` → `clientes.id_cliente`
+  - `detalle_ventas.id_venta` → `ventas.id_venta`
+  - `detalle_ventas.id_producto` → `productos.id_producto`
 
 ## 📋 Cómo Entregar el Taller (Para Estudiantes)
 
