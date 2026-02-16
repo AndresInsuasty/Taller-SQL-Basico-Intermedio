@@ -1,10 +1,5 @@
 # Archivos y directorios a ignorar en Git
 
-# Bases de datos (cada estudiante genera la suya)
-*.db
-*.sqlite
-*.sqlite3
-
 # Python
 __pycache__/
 *.py[cod]
