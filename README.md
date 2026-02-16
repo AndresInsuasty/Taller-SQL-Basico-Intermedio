@@ -203,7 +203,7 @@ erDiagram
 2. **Archivo por ejercicio:** `01_ejercicio.sql`, `02_ejercicio.sql`, etc.
 3. **Hacer commits** lógicos en Git
 4. **Incluir un README.md** en tu solución explicando cómo ejecutar
-5. **Entregar URL** del repositorio o `.zip` comprimido
+5. **Entregar URL** del repositorio
 
 ## 🛠️ Herramientas Recomendadas
 
@@ -227,14 +227,13 @@ erDiagram
 R: No. SQLite es local, suficiente para el taller.
 
 **P: ¿Cuánto tiempo toma resolver todo?**  
-R: ~10-15 horas para resolver los 30 ejercicios bien, dependiendo de experiencia.
+R: ~4-8 horas para resolver los 30 ejercicios bien, dependiendo de experiencia.
 
 **P: ¿Puedo modificar tienda.db?**  
 R: En principio no (es solo lectura). Si deseas experimentar, haz una copia primero.
 
 **P: ¿Hay soluciones disponibles?**  
-R: Las soluciones serán consensuadas con el profesor. Parte del aprendizaje es explorar.
-
+R: Las soluciones serán mostradas en un futuro.
 ## 👨‍🏫 Para Instructores
 
 Este material está diseñado para:
@@ -243,9 +242,8 @@ Este material está diseñado para:
 - ✅ Ser usado en aula o como autoestudio
 
 **Recomendación:** Aumenta el nivel gradualmente. 
-- Semana 1: Ejercicios 1-10
-- Semana 2: Ejercicios 11-20
-- Semana 3: Ejercicios 21-30
+- Semana 1: Ejercicios 1-15
+- Semana 2: Ejercicios 16-30
 
 ---
 
