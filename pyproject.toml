@@ -1,0 +1,11 @@
+[project]
+name = "taller-sql"
+version = "1.0.0"
+description = "Taller SQL educativo: El Último Salto - Tienda de Deportes Extremos"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{name = "Instructor", email = "instructor@example.com"}]
+keywords = ["sql", "sqlite3", "educativo", "base de datos"]
+dependencies = [
+    "faker>=40.4.0",
+]
